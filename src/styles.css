@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%
+}
+
+body {
+    font-family: "Playfair Display", serif;
+    font-size: 1.6rem;
+    background: url(../img/bg-chino.jpg);
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+main {
+    min-width: 30rem;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    padding: 3rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.div-price {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 6rem;
+    font-weight: bolder;
+    padding: 1rem;
+    line-height: 1.15;
+    margin: 2rem 0;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+p {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.btn {
+    border: none;
+    background-color: goldenrod;
+    color: whitesmoke;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.logo-carrito img{
+    width: 3rem;
+}
+
+.div-logo a img {
+    width: 10rem;
+    border-radius: 1rem;
+}
+
+.header-nav ul li {
+    font-size: 2.5rem;
+    padding: 2rem;
+}
+
+.div-redes {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.div-redes ul li img {
+    width: 5rem;
+}
+
+.header-nav ul,
+.div-redes ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.div-redes p {
+    margin: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   COLORES                                  */
+/* -------------------------------------------------------------------------- */
+
+.background-primary {
+    background-color: whitesmoke;
+    font-weight: bold;
+}
+
+.background-secondary {
+    background-color: royalblue;
+}
+
+
+.text-darkblue {
+    color: darkblue;
+}
+
+.text-goldenrod {
+    color: goldenrod;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   INICIO                                   */
+/* -------------------------------------------------------------------------- */
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 25rem;
+    height: auto;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card img {
+    width: 100%;
+    object-fit: cover;
+    max-height: 40rem;
+}
+
+.card p {
+    font-weight: 100;
+    font-size: small;
+    height: 7rem;
+    overflow: scroll;
+    background-color:rgba(151, 149, 149, 0.12);
+}
+
+.contenedor-cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   CARRITO                                  */
+/* -------------------------------------------------------------------------- */
+
+.cardCarrito {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 15rem;
+    height: 30rem;
+    overflow: scroll;
+    background-color: white;
+    border-radius: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.cardCarrito h3 {
+    font-size: smaller;
+    text-align: center;
+}
+
+.cardCarrito img {
+    width: 50%;
+    object-fit: cover;
+    max-height: 15rem;
+}
+
+.cardCarrito button {
+    width: 10rem;
+}
+
+.contenedor-cardCarrito {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.precio-total {
+    margin: 1rem;
+}
+
+.acciones-carrito {
+    width:100%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  CONTACTOS                                 */
+/* -------------------------------------------------------------------------- */
+
+.titulo-contacto {
+    margin: 2rem 0;
+}
+
+.form-contacto {
+    max-width: 45rem;
+    width: 90%;
+    padding: 3rem 4rem;
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    align-self: center;
+}
+
+form-campo label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2c3e50;
+    letter-spacing: 0.5px;
+}
+
+
+.form-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2.5rem;
+}
+
+.form-campo input,
+.form-campo textarea {
+    width: 100%;
+    padding: 1.2rem 1.6rem;
+    font-family: "Playfair Display", serif;
+    font-size: 1.6rem;
+    background: #f7f8fa;
+    border: 2px solid #8ea1b4;
+    border-radius: 1rem;
+    outline: none;
+    margin: 0;
+}
+
+
+.form-campo textarea {
+    min-height: 10rem;
+    resize: vertical;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                MEDIA QUERIES                               */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    header,
+    footer {
+        flex-direction: column;
+    }
+
+    header {
+        width: 100%;
+        position: fixed;
+    }
+
+    main {
+        margin-top: 200px;
+    }
+
+}

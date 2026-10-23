@@ -1,0 +1,23 @@
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-main {
+  width: min(120rem, calc(100% - 4rem));
+  margin: 2.4rem auto;
+  padding: clamp(2rem, 4vw, 4rem);
+  flex: 1;
+  background-color: var(--primary-background);
+  border-radius: 1.2rem;
+  box-shadow: var(--surface-shadow);
+}
+
+@media (max-width: 600px) {
+  .app-main {
+    width: calc(100% - 2rem);
+    margin: 1rem auto;
+    padding: 2rem 1.4rem;
+  }
+}

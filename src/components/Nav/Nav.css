@@ -1,0 +1,36 @@
+.main-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav-list a {
+  display: block;
+  padding: 1rem 1.6rem;
+  border-radius: 0.6rem;
+  color: var(--accent-color);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.main-nav-list a:hover,
+.main-nav-list a:focus-visible {
+  color: darkblue;
+  background-color: var(--primary-background);
+}
+
+.main-nav-list a:focus-visible {
+  outline: 0.3rem solid var(--accent-color);
+  outline-offset: 0.2rem;
+}
+
+@media (max-width: 400px) {
+  .main-nav-list a {
+    padding: 0.8rem 1.2rem;
+  }
+}

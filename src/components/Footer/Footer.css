@@ -1,0 +1,33 @@
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1.6rem;
+  padding: 2rem;
+  color: var(--accent-color);
+  background-color: var(--secondary-background);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-links img {
+  display: block;
+  width: 4.8rem;
+  height: 4.8rem;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    flex-direction: column;
+  }
+}
