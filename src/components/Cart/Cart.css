@@ -1,0 +1,144 @@
+.cart-view {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  width: 100%;
+}
+
+.cart-view h1 {
+  margin-bottom: 0;
+}
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  width: 100%;
+}
+
+.cart-list > .card {
+  display: flex;
+  min-height: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.2rem 2rem;
+  padding: 1.6rem;
+  text-align: left;
+}
+
+.cart-list .card-image {
+  width: 12rem;
+  height: 12rem;
+  flex: 0 0 12rem;
+  border-radius: 0.6rem;
+}
+
+.cart-list .card h3 {
+  flex: 1 1 20rem;
+  padding: 0;
+  text-align: left;
+}
+
+.cart-list .card-description {
+  min-height: 0;
+  flex: 1 1 100%;
+  padding: 0;
+  text-align: left;
+}
+
+.cart-list .div-price {
+  padding: 0;
+}
+
+.cart-list .card > p:not(.card-description):not(.div-price) {
+  margin: 0;
+  padding: 0;
+  color: var(--muted-text-color);
+}
+
+.cart-list .card button,
+.cart-summary button {
+  padding: 1rem 1.6rem;
+  border: 0;
+  border-radius: 0.6rem;
+  color: var(--primary-background);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cart-list .card button:hover,
+.cart-summary button:hover {
+  background-color: darkgoldenrod;
+}
+
+.cart-list .card button:focus-visible,
+.cart-summary button:focus-visible,
+.cart-empty a:focus-visible {
+  outline: 0.3rem solid darkblue;
+  outline-offset: 0.3rem;
+}
+
+.cart-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.2rem 2rem;
+  width: 100%;
+  padding: 1.6rem;
+  border-top: 0.2rem solid var(--accent-color);
+}
+
+.cart-summary p {
+  margin: 0 auto 0 0;
+  color: darkblue;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.cart-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 2.4rem;
+  border-radius: 1rem;
+  background-color: var(--surface-background);
+  box-shadow: var(--surface-shadow);
+  text-align: center;
+}
+
+.cart-empty p {
+  margin: 0;
+}
+
+.cart-empty a {
+  color: darkblue;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .cart-list > .card {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .cart-list .card h3,
+  .cart-list .card-description {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .cart-summary {
+    justify-content: center;
+  }
+
+  .cart-summary p {
+    flex-basis: 100%;
+    margin: 0;
+    text-align: center;
+  }
+}

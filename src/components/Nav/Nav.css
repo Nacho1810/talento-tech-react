@@ -29,6 +29,18 @@
   outline-offset: 0.2rem;
 }
 
+.counter {
+  color: whitesmoke;
+  background-color: goldenrod;
+  border-radius: 100%;
+  width: 27px;
+  height: 27px;
+  padding-bottom: 2px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 400px) {
   .main-nav-list a {
     padding: 0.8rem 1.2rem;

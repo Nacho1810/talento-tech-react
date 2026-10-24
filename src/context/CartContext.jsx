@@ -25,23 +25,23 @@ export const CartProvider = ({ children }) => {
     return inCart;
   }
 
-  const addItem = (product, quantity) => {
-    if (isInCart(product)) {
+  const addItem = (item, quantity) => {
+    if (isInCart(item)) {
       const updatedCart = cart.map(
-        prod => prod.id === product.id
+        prod => prod.id === item.id
           ? { ...prod, quantity: prod.quantity + quantity }
           : prod)
       setCart(updatedCart)
     } else {
       //la forma funcional se aseguro de acarrar el carrito een el estado anterior siempre
-      setCart(prevCart => [...prevCart, { ...product, quantity }])
+      setCart(prevCart => [...prevCart, { ...item, quantity }])
     }
-    alert(`El producto ${product.name} se agregó exitosamente al carrito`)
+    alert(`El producto ${item.name} se agregó al carrito`)
   }
 
-  const removeItem = (id) => {
-    setCart((prev) => prev.filter((element) => element.id !== id))
-    alert("Producto eliminado exitosamente")
+  const removeItem = (item) => {
+    setCart((prev) => prev.filter((element) => element.id !== item.id))
+    alert(`Producto  ${item.name} eliminado`)
   }
 
   const clearCart = () => {
@@ -59,7 +59,7 @@ export const CartProvider = ({ children }) => {
 
   const checkout = () => {
     alert("Su compra ha sido realizada")
-    clearCart()
+    setCart([])
     navigate("/")
   }
 
