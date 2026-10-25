@@ -1,0 +1,104 @@
+.product-form-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.product-form {
+  width: min(100%, 58rem);
+  padding: clamp(2rem, 5vw, 3.6rem);
+  border-top: 0.4rem solid var(--accent-color);
+  border-radius: 1rem;
+  background-color: var(--surface-background);
+  box-shadow: var(--surface-shadow);
+}
+
+.product-form h3 {
+  margin: 0 0 2.4rem;
+  color: var(--accent-color);
+  font-size: clamp(2.2rem, 4vw, 2.8rem);
+  text-align: center;
+}
+
+.product-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.product-form-fields label {
+  margin-top: 0.8rem;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.product-form-fields input {
+  width: 100%;
+  min-height: 4.4rem;
+  padding: 1rem 1.2rem;
+  border: 0.2rem solid #8ea1b4;
+  border-radius: 0.6rem;
+  color: var(--text-color);
+  background-color: #f7f8fa;
+  font: inherit;
+}
+
+.product-form-fields input:focus-visible {
+  border-color: var(--accent-color);
+  outline: 0.3rem solid rgb(218 165 32 / 25%);
+  outline-offset: 0.2rem;
+}
+
+.product-form-fields input[type="file"] {
+  min-height: auto;
+  padding: 0.8rem;
+  cursor: pointer;
+}
+
+.product-form-fields button {
+  min-height: 4.4rem;
+  margin-top: 1.2rem;
+  padding: 1rem 1.8rem;
+  border: 0;
+  border-radius: 0.6rem;
+  color: var(--primary-background);
+  background-color: var(--accent-color);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 160ms ease;
+}
+
+.product-form-fields button:hover:not(:disabled) {
+  background-color: darkgoldenrod;
+}
+
+.product-form-fields button:focus-visible {
+  outline: 0.3rem solid darkblue;
+  outline-offset: 0.3rem;
+}
+
+.product-form-fields button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.product-form-error {
+  margin: -0.4rem 0 0.4rem;
+  color: #b42318;
+  font-size: 1.4rem;
+}
+
+.product-form-general-error {
+  margin: 1.6rem 0 0;
+  padding: 1rem 1.2rem;
+  border-radius: 0.6rem;
+  background-color: #fef3f2;
+}
+
+@media (max-width: 600px) {
+  .product-form {
+    padding: 2rem 1.6rem;
+  }
+}

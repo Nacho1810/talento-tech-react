@@ -1,0 +1,60 @@
+.product-success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 32rem;
+}
+
+.product-success-card {
+  width: min(100%, 58rem);
+  padding: clamp(2.4rem, 5vw, 4rem);
+  border-top: 0.4rem solid var(--accent-color);
+  border-radius: 1rem;
+  background-color: var(--surface-background);
+  box-shadow: var(--surface-shadow);
+  text-align: center;
+}
+
+.product-success-card h2 {
+  margin: 0 0 1.6rem;
+  color: var(--accent-color);
+}
+
+.product-success-card p {
+  margin-bottom: 1.2rem;
+}
+
+.product-success-id {
+  color: var(--muted-text-color);
+  overflow-wrap: anywhere;
+}
+
+.product-success-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.4rem;
+}
+
+.product-success-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 4.4rem;
+  padding: 1rem 1.8rem;
+  border-radius: 0.6rem;
+  color: var(--primary-background);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 160ms ease;
+}
+
+.product-success-link:hover {
+  background-color: darkgoldenrod;
+}
+
+.product-success-link:focus-visible {
+  outline: 0.3rem solid darkblue;
+  outline-offset: 0.3rem;
+}

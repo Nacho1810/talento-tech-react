@@ -1,6 +1,7 @@
 import { db } from "../firebase/config";
-import { collection, doc, getDoc, getDocs, query, where } from "firebase/firestore";
+import { addDoc, collection, doc, getDoc, getDocs, query, where } from "firebase/firestore";
 
+// Referencia a la COLECCIÓN products de la base de datos
 const productsRef = collection(db, "products")
 
 export const getProducts = async () => {
@@ -30,8 +31,10 @@ export const getProductById = async (id) => {
 
     if (snapshot.exists()) {
       const product = { id: snapshot.id, ...snapshot.data() }
+
       return product
     } else {
+
       return null
     }
   } catch (error) {
@@ -50,11 +53,24 @@ export const getProductByCategory = async (category) => {
     }
     const snapshot = await getDocs(queryRef)
     const productsFormat = snapshot.docs.map((doc) => {
+
       return { id: doc.id, ...doc.data() }
     })
+
     return productsFormat
   } catch (error) {
     console.error("Error al filtrar productos por categoria", error)
+    throw error
+  }
+}
+
+export const createProduct = async (product) => {
+  try {
+    const docRef = await addDoc(productsRef, product)
+
+    return docRef.id
+  } catch (error) {
+    console.error("Error crear producto", error)
     throw error
   }
 }
