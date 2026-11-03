@@ -1,0 +1,132 @@
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  width: min(100%, 112rem);
+  margin: 0 auto;
+  padding: clamp(1.6rem, 3vw, 3.2rem);
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  padding: 2rem clamp(1.6rem, 3vw, 2.8rem);
+  border-bottom: 0.4rem solid var(--accent-color);
+  border-radius: 0.8rem;
+  background-color: var(--secondary-background);
+  box-shadow: var(--surface-shadow);
+}
+
+.dashboard-header h2 {
+  margin: 0;
+  color: var(--primary-background);
+}
+
+.dashboard-header-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dashboard-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 4.4rem;
+  padding: 0.9rem 1.6rem;
+  border: 0.2rem solid var(--accent-color);
+  border-radius: 0.6rem;
+  color: var(--primary-background);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.dashboard-button-secondary {
+  border-color: var(--primary-background);
+  color: var(--text-color);
+  background-color: var(--primary-background);
+}
+
+.dashboard-button:hover,
+.dashboard-action:hover {
+  color: var(--primary-background);
+  background-color: darkgoldenrod;
+}
+
+.dashboard-button:focus-visible,
+.dashboard-action:focus-visible {
+  outline: 0.3rem solid darkblue;
+  outline-offset: 0.3rem;
+}
+
+.dashboard-section {
+  padding: clamp(1.8rem, 3vw, 2.8rem);
+  border-radius: 1rem;
+  background-color: var(--surface-background);
+  box-shadow: var(--surface-shadow);
+}
+
+.dashboard-section h3 {
+  margin: 0 0 1.8rem;
+  color: var(--text-color);
+  font-size: 2.2rem;
+}
+
+.dashboard-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: 1.6rem;
+}
+
+.dashboard-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 9rem;
+  padding: 1.6rem;
+  border: 0.2rem solid var(--accent-color);
+  border-radius: 0.8rem;
+  color: darkblue;
+  background-color: var(--primary-background);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.dashboard-help {
+  border-left: 0.4rem solid var(--accent-color);
+}
+
+.dashboard-help h3 {
+  margin-bottom: 0.8rem;
+}
+
+.dashboard-help p {
+  margin: 0;
+  color: var(--muted-text-color);
+}
+
+@media (max-width: 600px) {
+  .admin-dashboard {
+    padding: 1.2rem 0.4rem;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .dashboard-header-actions {
+    justify-content: center;
+  }
+}
