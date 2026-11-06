@@ -33,10 +33,24 @@ export const CartProvider = ({ children }) => {
           : prod)
       setCart(updatedCart)
     } else {
-      //la forma funcional se aseguro de acarrar el carrito een el estado anterior siempre
+      //la forma funcional se aseguro de acarrar el carrito en el estado anterior siempre
       setCart(prevCart => [...prevCart, { ...item, quantity }])
     }
-    alert(`El producto ${item.name} se agregó al carrito`)
+    alert(`Se agrego ${quantity} unidad/es del producto ${item.name} al carrito`)
+  }
+
+  const subtractItem = (item) => {
+    const cartItem = cart.find((prod) => item.id === prod.id)
+    if (cartItem.quantity === 1) {
+      removeItem(item)
+    } else {
+     const updatedCart = cart.map(
+        prod => prod.id === item.id
+          ? { ...prod, quantity: prod.quantity - 1 }
+          : prod)
+      setCart(updatedCart)
+      alert(`Se elimino una unidad del producto ${item.name} `)
+    }
   }
 
   const removeItem = (item) => {
@@ -66,6 +80,7 @@ export const CartProvider = ({ children }) => {
   const values = {
     cart,
     addItem,
+    subtractItem,
     removeItem,
     clearCart,
     getTotalItems,
