@@ -1,0 +1,30 @@
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.category-link {
+  display: inline-flex;
+  min-height: 3.6rem;
+  max-width: 16rem;
+  align-items: center;
+  padding: 0.6rem 1.2rem;
+  border: 0.1rem solid #ddd;
+  border-radius: 0.6rem;
+  background-color: white;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+}
+
+.category-link:hover {
+  background-color: goldenrod;
+}
+
+.category-link:focus-visible {
+  outline: 0.2rem solid darkblue;
+  outline-offset: 0.2rem;
+}

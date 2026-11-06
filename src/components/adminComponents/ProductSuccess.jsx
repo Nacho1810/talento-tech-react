@@ -12,7 +12,7 @@ export const ProductSuccess = () => {
       <div className="product-success-actions">
         {/* <Link to="/admin/dashboard">Volver al panel</Link>
         <Link to="/admin/products/new">Cargar otro producto</Link> */}
-        <Link className="product-success-link" to="/admin">Cargar otro producto</Link>
+        <Link className="product-success-link" to="/admin">Volver al panel de administrador</Link>
       </div>
     </div>
   </section>

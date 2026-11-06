@@ -52,7 +52,7 @@
   padding: 0 1.6rem;
   color: var(--muted-text-color);
   font-size: 1.4rem;
-  text-align: center;
+  text-align: center; 
 }
 
 .div-price {
