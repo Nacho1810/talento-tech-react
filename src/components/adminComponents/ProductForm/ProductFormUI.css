@@ -7,7 +7,7 @@
 
 .product-form {
   width: min(100%, 58rem);
-  padding: clamp(2rem, 5vw, 3.6rem);
+  padding: 3.6rem;
   border-top: 0.4rem solid var(--accent-color);
   border-radius: 1rem;
   background-color: var(--surface-background);
@@ -17,7 +17,7 @@
 .product-form h3 {
   margin: 0 0 2.4rem;
   color: var(--accent-color);
-  font-size: clamp(2.2rem, 4vw, 2.8rem);
+  font-size: 2.8rem;
   text-align: center;
 }
 
@@ -101,5 +101,9 @@
 @media (max-width: 600px) {
   .product-form {
     padding: 2rem 1.6rem;
+  }
+
+  .product-form h3 {
+    font-size: 2.2rem;
   }
 }

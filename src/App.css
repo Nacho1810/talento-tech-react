@@ -7,11 +7,17 @@
 .app-main {
   width: min(120rem, calc(100% - 4rem));
   margin: 2.4rem auto;
-  padding: clamp(2rem, 4vw, 4rem);
+  padding: 4rem;
   flex: 1;
   background-color: var(--primary-background);
   border-radius: 1.2rem;
   box-shadow: var(--surface-shadow);
+}
+
+@media (max-width: 900px) {
+  .app-main {
+    padding: 2rem;
+  }
 }
 
 @media (max-width: 600px) {

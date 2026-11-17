@@ -8,7 +8,7 @@
 
 .product-success-card {
   width: min(100%, 58rem);
-  padding: clamp(2.4rem, 5vw, 4rem);
+  padding: 4rem;
   border-top: 0.4rem solid var(--accent-color);
   border-radius: 1rem;
   background-color: var(--surface-background);
@@ -57,4 +57,10 @@
 .product-success-link:focus-visible {
   outline: 0.3rem solid darkblue;
   outline-offset: 0.3rem;
+}
+
+@media (max-width: 600px) {
+  .product-success-card {
+    padding: 2.4rem;
+  }
 }

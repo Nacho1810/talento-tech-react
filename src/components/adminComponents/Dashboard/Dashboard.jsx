@@ -28,13 +28,13 @@ export const Dashboard = () => {
             Cargar
           </Link>
 
-          <Link to="#" className="dashboard-action">
+          {/* <Link to="#" className="dashboard-action">
             Modificar
           </Link>
 
-          <Link to="#" className="dashboard-action">
+          <Link to="#" className="dashboard-action" >
             Eliminar
-          </Link>
+          </Link> */}
         </div>
       </section>
 
